@@ -7,8 +7,7 @@ CREATE TABLE Products (
     Name VARCHAR(50) NOT NULL,
     Description VARCHAR(100),
     Price INT NOT NULL,
-    WarehouseAmount INT,
-    PRIMARY KEY (ID)
+    WarehouseAmount INT
 );
 
 CREATE TABLE Customers (
