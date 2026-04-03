@@ -9,7 +9,7 @@ CREATE TABLE Products (
     Price INT NOT NULL,
     WarehouseAmount INT,
     PRIMARY KEY (ID)
-)
+);
 
 CREATE TABLE Customers (
     ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -17,14 +17,14 @@ CREATE TABLE Customers (
     LastName VARCHAR(50),
     Email VARCHAR(50),
     Address VARCHAR(100)
-)
+);
 
 CREATE TABLE Orders (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     CustomerID INT,
     Date Date,
     FOREIGN KEY (CustomerID) REFERENCES Customers(ID) ON DELETE SET NULL
-)
+);
 
 CREATE TABLE OrderItems (
     ID INT PRIMARY KEY AUTO_INCREMENT,
@@ -32,5 +32,4 @@ CREATE TABLE OrderItems (
     ProductID INT,
     FOREIGN KEY (OrderID) REFERENCES Orders(ID) ON DELETE SET NULL,
     FOREIGN KEY (ProductID) REFERENCES Products(ID) ON DELETE SET NULL
-)
-
+);
